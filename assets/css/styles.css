@@ -109,12 +109,19 @@ section h2 {
   margin-bottom: 1em;
 }
 /* ABOUT */
-.about-title {
+.about-details img {
+  float: left;
+  height: 6em;
+  width: 6em;
+  border-radius: 100%;
+  margin: 1em;
 }
 /* SKILLS & EDUCATION */
 .skills-node li,
 .education-node li,
-.award-node li {
+.award-node li,
+.exp-node li,
+.int-node li {
   display: flex;
   width: 90%;
   margin: 0.5em auto;
