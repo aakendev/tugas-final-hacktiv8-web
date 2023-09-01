@@ -1,0 +1,212 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+label,
+input,
+textarea,
+button {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* HEADER and NAV */
+header {
+  display: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  box-shadow: 0 0 0.5em;
+  background-color: #777;
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+.nav-header h1 {
+  font-size: 4vw;
+  flex-grow: 1;
+}
+.nav-header img {
+  height: 2em;
+  width: 2em;
+  border-radius: 100%;
+  margin-right: 1em;
+}
+.nav-header .nav-button {
+  cursor: pointer;
+}
+.nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s;
+}
+.nav.nav-show {
+  max-height: 40em;
+}
+.nav ul {
+  display: flex;
+  flex-direction: column;
+}
+.nav ul li {
+  border-bottom: 0.25em solid;
+}
+.nav ul li:last-child {
+  border-bottom: none;
+}
+.nav ul li a {
+  display: block;
+  padding: 1em;
+}
+.nav ul li a:hover {
+  background-color: #37f;
+  font-weight: bold;
+}
+
+/* FLEXING */
+.flex {
+  display: flex;
+}
+.flex-full {
+  flex-grow: 1;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-itemscenter {
+  align-items: center;
+}
+
+/* SECTION */
+section {
+  padding: 1em;
+  margin-bottom: 2em;
+}
+section h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+/* ABOUT */
+.about-title {
+}
+/* SKILLS & EDUCATION */
+.skills-node li,
+.education-node li,
+.award-node li {
+  display: flex;
+  width: 90%;
+  margin: 0.5em auto;
+}
+.skills-node li span,
+.education-node li span,
+.award-node li span {
+  flex-grow: 1;
+}
+.skills-node li div,
+.education-node li div,
+.award-node li div {
+  width: 50%;
+}
+/* CONTACT ME */
+.contact-form .form-control {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 1em auto;
+}
+.form-control label {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+.form-control input,
+.form-control textarea,
+.contact-form button {
+  padding: 0.5em;
+  border-radius: 0.25em;
+}
+.contact-form button {
+  margin: 0 auto;
+  display: block;
+  border: none;
+  cursor: pointer;
+  background-color: #37f;
+  color: #fff;
+}
+.contact-form button:hover {
+  font-weight: bold;
+  background-color: #15f;
+}
+
+/* FOOTER */
+footer .footer-copyright {
+  text-align: center;
+  padding: 1em;
+  background-color: #37f;
+  color: #fff;
+}
+footer .footer-site {
+  padding: 1em;
+  background-color: #777;
+  color: #fff;
+}
+.footer-site h2 {
+  margin-bottom: 1em;
+}
+.footer-site a {
+  display: block;
+  max-width: 8em;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+}
+.footer-site a:hover,
+.footer-copyright a:hover {
+  font-weight: bold;
+  border-bottom: 0.05em solid;
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    max-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: #777;
+  }
+  .nav-header {
+    display: none;
+  }
+  .nav ul {
+    flex-direction: row;
+  }
+  .nav ul li {
+    border-bottom: none;
+  }
+  main {
+    margin-top: 8em;
+  }
+}
